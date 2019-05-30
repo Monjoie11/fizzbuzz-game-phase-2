@@ -1,8 +1,6 @@
-package edu.cnm.deepdive.model;
+package edu.cnm.deepdive.fizzbuzz.model;
 
-import android.renderscript.Sampler.Value;
 import androidx.annotation.NonNull;
-import java.util.Locale.Category;
 
 public class Round {
 

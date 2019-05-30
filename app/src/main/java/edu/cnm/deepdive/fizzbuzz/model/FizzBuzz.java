@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.model;
+package edu.cnm.deepdive.fizzbuzz.model;
 
 /**
  * Includes several public methods and constants.

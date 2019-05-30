@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.model;
+package edu.cnm.deepdive.fizzbuzz.model;
 
 import java.util.Collections;
 import java.util.LinkedList;
