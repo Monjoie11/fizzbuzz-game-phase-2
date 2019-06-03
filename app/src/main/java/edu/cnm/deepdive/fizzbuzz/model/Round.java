@@ -28,6 +28,21 @@ public class Round implements Serializable {
     return String.format(FORMAT_STRING, value, category, selection);
   }
 
+  public int getValue() {
+    return value;
+  }
+
+  public Category getCategory() {
+    return category;
+  }
+
+  public Category getSelection() {
+    return selection;
+  }
+  public boolean isCorrect() {
+    return category.equals(selection);
+  }
+
   public enum Category {
     FIZZ, BUZZ, FIZZ_BUZZ, NEITHER;
 
@@ -46,6 +61,11 @@ public class Round implements Serializable {
       }
       return category;
 
+    }
+
+    @Override
+    public String toString() {
+      return super.toString().toLowerCase();
     }
   }
 
