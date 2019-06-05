@@ -22,8 +22,8 @@
   <string name="game_time_key">game_time</string>
   <string name="game_time_title">Game duration</string>
   <string name="game_time_summary">Duration of game in seconds</string>
-  <string name="current_game_status">Current game status</string>
-  <string name="status">status</string>
+  <string name="status">Current game status</string>
+
   <string name="game_data_key">game_data</string>
   <string name="game_time_elapsed_key">game_time_elapsed</string>
 
@@ -34,8 +34,17 @@
 
   <string name="value_header">Value</string>
   <string name="category_header">Category</string>
-  <string name="correct_header">Correct</string>
+  <string name="correct_header">Correct?</string>
+
   <string name="correct_description">Correct!</string>
+
   <string name="incorrect_description">Incorrect!</string>
+  <string name="reset_message">Game reset!</string>
+
+  <string name="buzz_marker">5</string>
+  <string name="fizz_marker">3</string>
+  <string name="fizzbuzz_marker"><![CDATA[3&5]]></string>
+  <string name="neither_marker">—</string>
+
 
 </resources>
