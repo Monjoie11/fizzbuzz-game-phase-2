@@ -4,4 +4,6 @@
 
   <dimen name="indicator_size">120dp</dimen>
 
+  <dimen name="direction_arrow_padding">30dp</dimen>
+
 </resources>

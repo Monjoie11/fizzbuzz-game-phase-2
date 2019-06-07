@@ -151,6 +151,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="@string/neither_marker"
+    android:id="@+id/neither_marker"
     style="@style/DirectionMarker"
     app:layout_constraintLeft_toLeftOf="parent"
     app:layout_constraintRight_toRightOf="parent"
@@ -163,6 +164,45 @@
     style="@style/ClockDisplay"
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintEnd_toEndOf="parent"/>
+
+  <ImageView
+    android:layout_width="30dp"
+    android:layout_height="180dp"
+    android:id="@+id/down_arrow"
+    android:src="@drawable/down_arrow"
+    android:paddingBottom="@dimen/direction_arrow_padding"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"/>
+
+  <ImageView
+    android:layout_width="30dp"
+    android:layout_height="180dp"
+    android:id="@+id/up_arrow"
+    android:src="@drawable/up_arrow"
+    android:paddingBottom="@dimen/direction_arrow_padding"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"/>
+
+  <ImageView
+    android:layout_width="180dp"
+    android:layout_height="30dp"
+    android:id="@+id/right_arrow"
+    android:src="@drawable/right_arrow"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintRight_toRightOf="parent"/>
+
+  <ImageView
+    android:layout_width="180dp"
+    android:layout_height="30dp"
+    android:id="@+id/left_arrow"
+    android:src="@drawable/ic_arrow_back_black_24dp"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"/>
+
 
 
 
