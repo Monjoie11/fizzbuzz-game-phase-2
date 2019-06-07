@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.graphics.Rect;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.Menu;
@@ -301,22 +302,64 @@ public class MainActivity extends AppCompatActivity
       case FIZZ:
         indicator = findViewById(round.isCorrect() ?
             R.id.correct_fizz_indicator : R.id.incorrect_fizz_indicator);
+        fadeDirection(category);
         break;
       case BUZZ:
         indicator = findViewById(round.isCorrect() ?
             R.id.correct_buzz_indicator : R.id.incorrect_buzz_indicator);
+        fadeDirection(category);
         break;
       case FIZZ_BUZZ:
         indicator = findViewById(round.isCorrect() ?
             R.id.correct_fizzbuzz_indicator : R.id.incorrect_fizzbuzz_indicator);
+        fadeDirection(category);
         break;
       default:
         indicator = findViewById(round.isCorrect() ?
             R.id.correct_neither_indicator : R.id.incorrect_neither_indicator);
+        fadeDirection(category);
         break;
     }
     fade.setTarget(indicator);
     fade.start();
+  }
+
+  private void fadeDirection(Category selection) {
+    Category category = Category.fromValue(value);
+    ImageView direction1;
+    ImageView direction2;
+    ImageView direction3;
+    Animator fadeDir1 = AnimatorInflater.loadAnimator(this, R.animator.direction_fade);
+    Animator fadeDir2 = AnimatorInflater.loadAnimator(this, R.animator.direction_fade);
+    Animator fadeDir3 = AnimatorInflater.loadAnimator(this, R.animator.direction_fade);
+    switch (category) {
+      case FIZZ:
+        direction1 = findViewById(R.id.down_arrow);
+        direction2 = findViewById(R.id.right_arrow);
+        direction3 = findViewById(R.id.up_arrow);
+        break;
+      case BUZZ:
+        direction3 = findViewById(R.id.down_arrow);
+        direction2 = findViewById(R.id.left_arrow);
+        direction1 = findViewById(R.id.up_arrow);
+        break;
+      case FIZZ_BUZZ:
+        direction1 = findViewById(R.id.left_arrow);
+        direction2 = findViewById(R.id.right_arrow);
+        direction3 = findViewById(R.id.down_arrow);
+        break;
+      default:
+        direction1 = findViewById(R.id.left_arrow);
+        direction2 = findViewById(R.id.right_arrow);
+        direction3 = findViewById(R.id.up_arrow);
+        break;
+    }
+    fadeDir1.setTarget(direction1);
+    fadeDir1.start();
+    fadeDir2.setTarget(direction2);
+    fadeDir2.start();
+    fadeDir3.setTarget(direction3);
+    fadeDir3.start();
   }
 
   private void updateValue() {
