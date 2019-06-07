@@ -20,8 +20,11 @@
       android:parentActivityName=".controller.MainActivity"
       android:launchMode="singleTop"/>
 
+
     <activity android:name=".controller.MainActivity"
-      android:launchMode="singleTop">
+      android:launchMode="singleTop"
+      android:configChanges="orientation|fontScale"
+      android:label="@string/app_name">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
 
